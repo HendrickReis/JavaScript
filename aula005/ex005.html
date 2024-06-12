@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(114, 173, 240);
+            color: white;
+            font: normal 20pt Arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando testes com DOM</h1>
+    <p id="capa">aqui está o resultado</p>
+    <p><strong>aprendendo a usar DOM em JS</strong>.</p>
+    <div id="smogon">
+        clique em mim
+    </div>
+    <div>
+        smogon
+    </div>
+    <script>
+        var corpo = window.document.body
+        corpo.style.background = 'bluecore'
+        var p1 = window.document.getElementsByTagName('div')[1]
+        window.document.write(`<strong>além de ${p1.innerHTML}, está escrito assim:</strong> ` + p1.innerHTML)
+        p1.style.color = 'blue'
+        /*
+
+        var d = window.document.getElementById('smogon')
+       d.innerText = 'smogoooon'
+       d.style.color = 'green'
+       d.style.background = 'greenyellow'
+
+       */
+
+      var d = window.document.querySelector('div#smogon')
+      d.style.color = 'red'
+      d.style.background = 'blue'
+
+      var smog = window.document.div
+      div.style.background = blue
+    </script>
+</body>
+</html>

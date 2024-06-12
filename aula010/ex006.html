@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      div#area{
+        font: normal 15pt sans-serif;
+        background-color: rgb(118, 209, 118);
+        color: white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+      }
+    </style>
+    <title>Eventos DOM</title>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+       interaja...
+    </div>
+    <script>
+  // var a = window.document.querySelector('area')
+  // ^ usar isso para usar 1 variavel para todas as funções
+
+        function clicar() {
+            var a = window.document.querySelector('div#area')
+           a.innerText =  `CLICOU!`
+           a.style.background = 'red'
+        }
+
+        function entrar() {
+            var s = window.document.querySelector('div#area')
+            s.innerText = 'Entrou!'
+            s.style.background = 'blue'
+        }
+
+        function sair() {
+            var u = window.document.querySelector('div#area')
+            u.innerText = 'saiu!'
+            u.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

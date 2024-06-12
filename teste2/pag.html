@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p {
+            text-align: center;
+            padding-top: 36px;
+        }
+        div#mudar {
+            background-color: red;
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+        }
+
+        div#teste2 {
+            margin-top: 50px;
+            background-color: green;
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Clique aqui para mudar de cor</h1>
+    <div id="mudar">
+        <p>smogon</p>
+    </div>
+    <input type="button" value="clique" id="clique">
+    <div id="teste2">
+         capa
+    </div>
+    <input type="button" value="clicar" onmousemove="mudou()">
+
+    <script>
+    var mudarCor = window.document.getElementById('mudar')
+
+       clique.onmousemove = function () {
+       console.log('mudou!')
+       mudarCor.style.background = 'green'
+    }
+
+    function mudou() {
+        var div2 = window.document.getElementById('teste2')
+        div2.style.background = 'red'
+
+
+    }
+    </script>
+</body>
+</html>

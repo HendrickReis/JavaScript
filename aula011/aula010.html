@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Style>
+        div#resul{
+         margin-bottom: 50px;
+        }
+    </Style>
+    <title>Malha fina do Detran</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+
+   velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="Verificar" onmousemove="calcular()">
+
+    <div id="resul">
+<strong>Resultado</strong>
+    </div>
+    
+    <h1>De que País você veio?</h1>
+    Brasil ou EUA? <input type="text" name="txtp" id="txtp">
+    <input type="button" value="gerar" onmousemove="clicar()">
+    <div id="resultado">
+    <strong>Conclusão</strong>
+    </div>
+    <script>
+
+        function calcular() {
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#resul')
+            var vel = Number(txtv.value)
+
+            res.innerHTML = `Sua velocidade atual é de <strong>${vel} km/h</strong>`
+
+            if (vel > 60) {
+                res.innerHTML += '<p>Você está MULTADO por excesso de velocidade'
+            }
+
+            res.innerHTML += '<p>Dirija sempre com cinto de segurança!</p>'
+        }
+
+       function clicar() {
+        var txtpa = window.document.querySelector('input#txtp')
+        var caixa = window.document.querySelector('div#resultado')
+
+        var país = String(txtpa.value)
+
+        caixa.innerHTML = `O país que você mora entre Brasil e EUA é ${país}!`
+
+if (país == 'Brasil') {
+            caixa.innerHTML += '<p>Você é um <strong>nativo Brasileiro</strong>! parabéns!</p>'
+            caixa.style.color = 'blue'
+        }
+        else if (país == 'Eua' || país == 'França'){
+            caixa.innerHTML += '<p>Você é um estrangeiro em releção a nós! bom te conhecer</p>'
+            caixa.style.color = 'red'
+        }
+        else if (país){
+            caixa.innerHTML += '<p>parabéns! ninguem liga pra onde você mora!</p>'
+        } else if (país == false){
+            caixa.innerHTML = '???'
+            caixa.innerHTML += '<p>tu mora na rua é?</p>'
+            caixa.style.color = 'green'
+        }
+
+       }
+        
+        </script>
+</body>
+</html>

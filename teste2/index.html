@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #modal{
+            background-color: rgb(141, 134, 134);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+    <title>Menu</title>
+</head>
+<body onload="modal.show()">
+    <h1>smogon</h1>
+    <dialog id="modal">
+            <h1>vá para a próxima página!</h1>
+            <p><a href="pag.html" target="_blank" rel="external">pagina</a></p>
+            <button onmousemove="modal.close()" autofocus>fechar</button>
+    </dialog>
+
+    <input type="button" value="clique" onmousemove="modal.showModal()">
+</body>
+</html>

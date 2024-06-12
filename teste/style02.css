@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+body{
+    font: normal normal 16pt Verdana;
+    background-color: rgb(48, 45, 45);
+}
+
+h1{
+    text-align: center;
+    color: rgb(174, 185, 21);
+}
+
+p{
+    text-align: center;
+}
