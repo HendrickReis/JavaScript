@@ -1,2 +1,2 @@
 # JavaScript
- Curso de javascript feito no CursoEmVideo
+ Curso de javascript de Hendry feito no CursoEmVideo
