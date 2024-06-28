@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(60, 134, 231);
+   font: normal, 15pt Arial;
+}
+
+header {
+ color: white;
+ text-align: center;
+}
+
+Section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 8px;
+    min-width: 400px;
+    max-width: 310px;
+    min-height: 200px;
+    margin: 0px auto;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.288);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div {
+text-align: center;
+}
+
+div#foto{
+  padding-top: 15px;
+}
+
+footer {
+  color: white;
+  text-align: center;
+}

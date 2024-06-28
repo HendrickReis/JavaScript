@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Modelo de Exercício</title>
+    <title>Tabuada</title>
 </head>
 <body onload="carregar()">
     <header>
-     <h1>Hora do Dia</h1>
+     <h1>Tabuada</h1>
     </header>
     <section>
         <div id="msg">
-         Aqui jás mensagem...
+         <p>Número: <input type="number" name="num" id="num">
+        <button id="gerar">Gerar Tabuada</button></p>
+        </div>
+        <div>
+            <select name="tabuada" id="sel">
+                <option value="">Digite um número acima</option>
+            </select>
         </div>
     </section>
     <footer>
