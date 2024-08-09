@@ -1,26 +1,31 @@
 let verificar = window.document.getElementById('verificar')
+let num = window.document.querySelector('input#num')
+let lista = document.querySelector('select#flista')
+let res = window.document.querySelector('div#res')
+
+let valores = []
 
 verificar.onclick = function () {
-    let lista = []
-    let num = window.document.getElementById('num')
-    let fim = window.document.getElementById('clique')
-    let arm = window.document.getElementById('list')
-    let res = window.document.getElementById('res')
-
-    if (num.value.length == 0) {
-        window.alert("[ERRO] Valor inválido ou já encontrado na lista")
+    if(isNumero(num.value) && !inLista(num.value, valores)) {
+       window.alert('tudo ok')
+       lista.appendChild(num.value)
     } else {
-        res.innerHTML = ''
+        window.alert('[ERRO] Valor inválido ou já encontrado na lista.')
+    }
+}
 
-        let n = Number(num.value)
-        lista.push(n)
-        let item = document.createElement('option')
-        item.text = `${n} foi adicionado a lista`
-        item.value = `${n}`
-        arm.appendChild(item)
-        
-        res.innerHTML = `${lista}`
+function isNumero(n) {
+     if (Number(n) >= 1 && Number(n) <= 100) {
+        return true
+     } else {
+        return false
+     }
+}
 
-
+function inLista(n, l) {
+    if (l.indexOf(Number(n)) != -1) {
+        return true
+    } else {
+        return false
     }
 }

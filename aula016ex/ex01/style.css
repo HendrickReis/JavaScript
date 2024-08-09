@@ -46,3 +46,7 @@ footer {
 #res {
     margin: 50px;
 }
+
+#flista {
+    min-width: 150px;
+}
